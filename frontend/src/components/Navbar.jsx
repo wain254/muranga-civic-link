@@ -15,7 +15,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="h-12 w-auto bg-white rounded p-1" />
+          {/* FIXED LOGO PATH */}
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="h-12 w-auto bg-white rounded p-1" />
           <div>
             <h1 className="font-bold text-lg leading-tight uppercase tracking-wide">Murang'a County</h1>
             <p className="text-xs text-muranga-light font-semibold tracking-widest">CIVIC LINK SYSTEM</p>

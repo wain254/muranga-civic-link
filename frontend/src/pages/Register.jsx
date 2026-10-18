@@ -9,17 +9,18 @@ export default function Register() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
+    e.preventDefault(); 
+    setError(''); 
     setLoading(true);
-    try {
-      await api.post('/api/register', form);
-      alert('Registration successful! Please log in.');
-      navigate('/login');
-    } catch (err) {
-      setError(err.response?.data?.detail || 'Registration failed');
-    } finally {
-      setLoading(false);
+    try { 
+      await api.post('/api/register', form); 
+      alert('Registration successful! Please log in.'); 
+      navigate('/login'); 
+    } 
+    catch (err) { 
+      setError(err.response?.data?.detail || 'Registration failed'); 
+    } finally { 
+      setLoading(false); 
     }
   };
 
@@ -27,7 +28,8 @@ export default function Register() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md border-t-8 border-muranga-green">
         <div className="flex flex-col items-center mb-6">
-          <img src="/logo.png" alt="Muranga Logo" className="h-16 mb-3" />
+          {/* FIXED LOGO PATH */}
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Muranga Logo" className="h-16 mb-3" />
           <h1 className="text-xl font-bold text-muranga-dark uppercase">Citizen Registration</h1>
         </div>
 

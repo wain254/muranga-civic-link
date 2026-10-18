@@ -26,13 +26,12 @@ export default function Login() {
 
       login(user, access_token);
 
-      // REDIRECT BASED ON ROLE
       if (user.role === 'admin') {
         navigate('/admin');
       } else if (user.role === 'officer') {
-        navigate('/officer'); // <--- Officer goes to /officer
+        navigate('/officer');
       } else {
-        navigate('/dashboard'); // <--- Citizen goes to /dashboard
+        navigate('/dashboard');
       }
       
     } catch (err) {
@@ -47,7 +46,8 @@ export default function Login() {
       <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md border-t-8 border-muranga-green">
         
         <div className="flex flex-col items-center mb-8">
-          <img src="/logo.png" alt="Muranga Logo" className="h-20 mb-4" />
+          {/* FIXED LOGO PATH */}
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Muranga Logo" className="h-20 mb-4" />
           <h1 className="text-2xl font-bold text-muranga-dark uppercase tracking-wide text-center">
             Murang'a County
           </h1>
@@ -69,7 +69,7 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-muranga-green focus:border-muranga-green transition"
-              placeholder="e.g. Amari@gmail.com"
+              placeholder="e.g. admin@muranga.go.ke"
             />
           </div>
           

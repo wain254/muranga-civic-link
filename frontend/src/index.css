@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-muranga-green: #008f39;
+  --color-muranga-dark: #005c25;
+  --color-muranga-light: #e6f4ea;
+  --color-muranga-gold: #f1c40f;
+}

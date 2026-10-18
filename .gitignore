@@ -1,0 +1,24 @@
+# Environment variables (Passwords)
+.env
+backend/.env
+
+# Database
+ecitizen.db
+backend/ecitizen.db
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Uploads (Images saved locally)
+backend/uploads/
+
+# VS Code settings
+.vscode/
+.DS_Store
